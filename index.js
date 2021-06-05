@@ -1,17 +1,16 @@
 module.exports = {
     "parser": "@typescript-eslint/parser",
     "plugins": [
-        "@typescript-eslint",
-        "prettier"
+        "@typescript-eslint"        
     ],
     "extends": [
         "eslint:recommended",
         "plugin:@typescript-eslint/eslint-recommended",
         "plugin:@typescript-eslint/recommended",
-        "prettier"
-    ],
-    "rules": {
-        'arrow-body-style': 'off',
-        'prefer-arrow-callback': 'off'
+        "plugin:prettier/recommended"
+    ],  
+    "rules": {"@typescript-eslint/no-unused-vars": [
+        "error", { "varsIgnorePattern": "^_", "argsIgnorePattern": "^_" }
+      ] 
     }
 }
